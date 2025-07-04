@@ -24,7 +24,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepublishOnly": "pnpm run build:lib",
-    "release": "bumpp --commit --push --tag && pnpm publish"
+    "release": "bumpp --commit --push --tag && pnpm publish --access public"
   },
   "peerDependencies": {
     "vue": "^3.5.17"
