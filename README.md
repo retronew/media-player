@@ -1,34 +1,34 @@
 # Vue3 Media Player
 
-一个基于 Vue3 + TypeScript 的现代化视频播放器组件，使用 media-chrome 作为核心功能，UnoCSS + Wind3 preset 实现样式。
+A modern video player component based on Vue3 + TypeScript, using media-chrome for core functionality and UnoCSS + Wind3 preset for styling.
 
-## 特性
+## Features
 
-- ✅ 基于 Vue3 + TypeScript 开发
-- ✅ 使用 media-chrome 提供专业级媒体控制
-- ✅ UnoCSS + Wind3 preset 样式方案
-- ✅ 完全响应式设计
-- ✅ 可自定义样式和控件
-- ✅ 完整的 TypeScript 类型支持
-- ✅ 支持所有现代浏览器
+- 💻 Developed with Vue3 + TypeScript
+- 🎛️ Uses media-chrome for professional-grade media controls
+- 🎨 Styled with UnoCSS + Wind3 preset
+- 📱💻 Fully responsive design
+- ⚙️ Customizable styles and controls
+- 🛡️ Complete TypeScript type support
+- 🌐 Supports all modern browsers
 
-## 安装
+## Installation
 
 ```bash
-npm install vue3-media-player
-# 或
-yarn add vue3-media-player
-# 或
-pnpm add vue3-media-player
+npm install @retronew/media-player
+# or
+yarn add @retronew/media-player
+# or
+pnpm add @retronew/media-player
 ```
 
-## 使用
+## Usage
 
-### 基本用法
+### Basic Usage
 
 ```vue
 <script setup lang="ts">
-import { VueMediaPlayer } from 'vue3-media-player'
+import { VueMediaPlayer } from '@retronew/media-player'
 
 function onPlay() {
   console.log('Video started playing')
@@ -51,25 +51,13 @@ function onPause() {
 </template>
 ```
 
-### 全局注册
-
-```ts
-import { createApp } from 'vue'
-import { install as VueMediaPlayerInstall } from 'vue3-media-player'
-import App from './App.vue'
-
-const app = createApp(App)
-app.use(VueMediaPlayerInstall)
-app.mount('#app')
-```
-
-### 使用组件实例方法
+### Using Component Instance Methods
 
 ```vue
 <script setup lang="ts">
-import type { MediaPlayerInstance } from 'vue3-media-player'
+import type { MediaPlayerInstance } from '@retronew/media-player'
+import { VueMediaPlayer } from '@retronew/media-player'
 import { ref } from 'vue'
-import { VueMediaPlayer } from 'vue3-media-player'
 
 const playerRef = ref<MediaPlayerInstance>()
 
@@ -93,13 +81,13 @@ function seek(time: number) {
       src="https://example.com/video.mp4"
     />
     <button @click="play">
-      播放
+      Play
     </button>
     <button @click="pause">
-      暂停
+      Pause
     </button>
     <button @click="seek(30)">
-      跳转到30秒
+      Seek to 30s
     </button>
   </div>
 </template>
@@ -107,62 +95,62 @@ function seek(time: number) {
 
 ## Props
 
-| 属性                     | 类型                               | 默认值        | 描述                 |
-| ------------------------ | ---------------------------------- | ------------- | -------------------- |
-| `src`                    | `string`                           | -             | 视频源地址（必需）   |
-| `poster`                 | `string`                           | `''`          | 封面图片地址         |
-| `width`                  | `number \| string`                 | `704`         | 视频宽度             |
-| `height`                 | `number \| string`                 | `528`         | 视频高度             |
-| `preload`                | `'auto' \| 'metadata' \| 'none'`   | `'auto'`      | 预加载策略           |
-| `muted`                  | `boolean`                          | `false`       | 是否静音             |
-| `autoplay`               | `boolean`                          | `false`       | 是否自动播放         |
-| `loop`                   | `boolean`                          | `false`       | 是否循环播放         |
-| `crossorigin`            | `'anonymous' \| 'use-credentials'` | `'anonymous'` | 跨域设置             |
-| `playsinline`            | `boolean`                          | `false`       | 是否内联播放         |
-| `showControls`           | `boolean`                          | `true`        | 是否显示控制栏       |
-| `showTimeDisplay`        | `boolean`                          | `true`        | 是否显示当前时间     |
-| `showTimeRange`          | `boolean`                          | `true`        | 是否显示进度条       |
-| `showDurationDisplay`    | `boolean`                          | `true`        | 是否显示总时长       |
-| `showVolumeControls`     | `boolean`                          | `true`        | 是否显示音量控制     |
-| `showVolumeRange`        | `boolean`                          | `true`        | 是否显示音量滑块     |
-| `showFullscreenButton`   | `boolean`                          | `true`        | 是否显示全屏按钮     |
-| `containerClass`         | `string`                           | `''`          | 容器额外样式类       |
-| `videoClass`             | `string`                           | `''`          | 视频元素额外样式类   |
-| `controlsContainerClass` | `string`                           | `''`          | 控制栏容器额外样式类 |
-| `controlBarClass`        | `string`                           | `''`          | 控制栏额外样式类     |
+| Attribute                | Type                               | Default Value | Description                            |
+| :----------------------- | :--------------------------------- | :------------ | :------------------------------------- |
+| `src`                    | `string`                           | -             | Video source URL (required)            |
+| `poster`                 | `string`                           | `''`          | Poster image URL                       |
+| `width`                  | `number \| string`                 | `704`         | Video width                            |
+| `height`                 | `number \| string`                 | `528`         | Video height                           |
+| `preload`                | `'auto' \| 'metadata' \| 'none'`   | `'auto'`      | Preload strategy                       |
+| `muted`                  | `boolean`                          | `false`       | Whether the video is muted             |
+| `autoplay`               | `boolean`                          | `false`       | Whether to autoplay the video          |
+| `loop`                   | `boolean`                          | `false`       | Whether to loop the video              |
+| `crossorigin`            | `'anonymous' \| 'use-credentials'` | `'anonymous'` | Cross-origin setting                   |
+| `playsinline`            | `boolean`                          | `false`       | Whether to play inline                 |
+| `showControls`           | `boolean`                          | `true`        | Whether to show the control bar        |
+| `showTimeDisplay`        | `boolean`                          | `true`        | Whether to show the current time       |
+| `showTimeRange`          | `boolean`                          | `true`        | Whether to show the progress bar       |
+| `showDurationDisplay`    | `boolean`                          | `true`        | Whether to show the total duration     |
+| `showVolumeControls`     | `boolean`                          | `true`        | Whether to show volume controls        |
+| `showVolumeRange`        | `boolean`                          | `true`        | Whether to show the volume slider      |
+| `showFullscreenButton`   | `boolean`                          | `true`        | Whether to show the fullscreen button  |
+| `containerClass`         | `string`                           | `''`          | Extra class for the container          |
+| `videoClass`             | `string`                           | `''`          | Extra class for the video element      |
+| `controlsContainerClass` | `string`                           | `''`          | Extra class for the controls container |
+| `controlBarClass`        | `string`                           | `''`          | Extra class for the control bar        |
 
-## 事件
+## Events
 
-| 事件名           | 参数               | 描述                 |
-| ---------------- | ------------------ | -------------------- |
-| `play`           | -                  | 开始播放时触发       |
-| `pause`          | -                  | 暂停播放时触发       |
-| `ended`          | -                  | 播放结束时触发       |
-| `timeupdate`     | `time: number`     | 播放时间更新时触发   |
-| `durationchange` | `duration: number` | 视频时长变化时触发   |
-| `volumechange`   | `volume: number`   | 音量变化时触发       |
-| `error`          | `error: Event`     | 播放出错时触发       |
-| `loadedmetadata` | -                  | 元数据加载完成时触发 |
-| `seek`           | `time: number`     | 跳转播放位置时触发   |
-| `mute`           | -                  | 静音时触发           |
-| `unmute`         | -                  | 取消静音时触发       |
-| `fullscreen`     | -                  | 进入全屏时触发       |
-| `exitFullscreen` | -                  | 退出全屏时触发       |
+| Event Name       | Parameters         | Description                           |
+| :--------------- | :----------------- | :------------------------------------ |
+| `play`           | -                  | Fired when playback begins            |
+| `pause`          | -                  | Fired when playback is paused         |
+| `ended`          | -                  | Fired when playback ends              |
+| `timeupdate`     | `time: number`     | Fired when the playback time updates  |
+| `durationchange` | `duration: number` | Fired when the video duration changes |
+| `volumechange`   | `volume: number`   | Fired when the volume changes         |
+| `error`          | `error: Event`     | Fired when a playback error occurs    |
+| `loadedmetadata` | -                  | Fired when metadata has been loaded   |
+| `seek`           | `time: number`     | Fired when a seek operation completes |
+| `mute`           | -                  | Fired when the video is muted         |
+| `unmute`         | -                  | Fired when the video is unmuted       |
+| `fullscreen`     | -                  | Fired when entering fullscreen mode   |
+| `exitFullscreen` | -                  | Fired when exiting fullscreen mode    |
 
-## 实例方法
+## Instance Methods
 
-| 方法名                      | 参数                    | 描述           |
-| --------------------------- | ----------------------- | -------------- |
-| `play()`                    | -                       | 开始播放       |
-| `pause()`                   | -                       | 暂停播放       |
-| `seek(time: number)`        | `time`: 目标时间（秒）  | 跳转到指定时间 |
-| `setVolume(volume: number)` | `volume`: 音量值（0-1） | 设置音量       |
-| `setMuted(muted: boolean)`  | `muted`: 是否静音       | 设置静音状态   |
-| `toggleFullscreen()`        | -                       | 切换全屏状态   |
+| Method Name                 | Parameters              | Description                  |
+| :-------------------------- | :---------------------- | :--------------------------- |
+| `play()`                    | -                       | Starts playback              |
+| `pause()`                   | -                       | Pauses playback              |
+| `seek(time: number)`        | `time`: target time (s) | Seeks to a specific time     |
+| `setVolume(volume: number)` | `volume`: value (0-1)   | Sets the volume              |
+| `setMuted(muted: boolean)`  | `muted`: is muted       | Sets the muted state         |
+| `toggleFullscreen()`        | -                       | Toggles the fullscreen state |
 
-## 样式自定义
+## Style Customization
 
-### 自定义样式类
+### Custom CSS Classes
 
 ```vue
 <VueMediaPlayer
@@ -173,33 +161,33 @@ function seek(time: number) {
 />
 ```
 
-## 开发
+## Development
 
 ```bash
-# 克隆项目
+# Clone the project
 git clone <repository-url>
 
-# 安装依赖
+# Install dependencies
 npm install
 
-# 启动开发服务器
+# Start the development server
 npm run dev
 
-# 构建库
+# Build the library
 npm run build:lib
 
-# 构建演示
+# Build the demo
 npm run build
 ```
 
-## 技术栈
+## Tech Stack
 
-- [Vue 3](https://vuejs.org/) - 渐进式 JavaScript 框架
-- [TypeScript](https://www.typescriptlang.org/) - 类型安全的 JavaScript
-- [media-chrome](https://github.com/muxinc/media-chrome) - 媒体控制组件
-- [UnoCSS](https://unocss.dev/) - 原子化 CSS 引擎
-- [Vite](https://vitejs.dev/) - 快速构建工具
+- [Vue 3](https://vuejs.org/) - The Progressive JavaScript Framework
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- [media-chrome](https://github.com/muxinc/media-chrome) - Media controls components
+- [UnoCSS](https://unocss.dev/) - The instant atomic CSS engine
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 
-## 许可证
+## License
 
 MIT License
