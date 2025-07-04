@@ -1,0 +1,53 @@
+{
+  "name": "@retronew/media-player",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:lib": "vue-tsc && vite build --mode lib",
+    "preview": "vite preview",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prepublishOnly": "pnpm run build:lib",
+    "release": "bumpp --commit --push --tag && pnpm publish"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.17"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.525.0",
+    "media-chrome": "^4.12.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.16.2",
+    "@microsoft/api-extractor": "^7.52.8",
+    "@types/node": "^24.0.10",
+    "@unocss/eslint-config": "^66.3.2",
+    "@unocss/eslint-plugin": "^66.3.2",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "bumpp": "^10.2.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-format": "^1.0.1",
+    "typescript": "~5.8.3",
+    "unocss": "^66.3.2",
+    "unplugin-dts": "1.0.0-beta.2",
+    "vite": "^7.0.1",
+    "vue-tsc": "^3.0.1"
+  }
+}
