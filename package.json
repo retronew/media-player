@@ -2,7 +2,7 @@
   "name": "@retronew/media-player",
   "type": "module",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "exports": {
     ".": {
       "import": "./dist/index.js",
