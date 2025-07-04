@@ -1,12 +1,12 @@
 # Vue3 Media Player
 
-一个基于 Vue3 + TypeScript 的现代化视频播放器组件，使用 media-chrome 作为核心功能，UnoCSS + Wind4 preset 实现样式。
+一个基于 Vue3 + TypeScript 的现代化视频播放器组件，使用 media-chrome 作为核心功能，UnoCSS + Wind3 preset 实现样式。
 
 ## 特性
 
 - ✅ 基于 Vue3 + TypeScript 开发
 - ✅ 使用 media-chrome 提供专业级媒体控制
-- ✅ UnoCSS + Wind4 preset 样式方案
+- ✅ UnoCSS + Wind3 preset 样式方案
 - ✅ 完全响应式设计
 - ✅ 可自定义样式和控件
 - ✅ 完整的 TypeScript 类型支持
