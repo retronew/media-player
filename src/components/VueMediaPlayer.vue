@@ -257,7 +257,7 @@ onUnmounted(() => {
         ]"
       >
         <media-play-button
-          class=":uno: outline-none"
+          class=":uno: p-2.5 outline-none"
           :aria-label="isPlaying ? 'pause' : 'play'"
         >
           <PlayIcon
@@ -315,7 +315,7 @@ onUnmounted(() => {
 
         <media-fullscreen-button
           v-if="showFullscreenButton"
-          class=":uno: outline-none"
+          class=":uno: p-2.5 outline-none"
           :aria-label="isFullscreen ? 'exit fullscreen mode' : 'enter fullscreen mode'"
         >
           <MaximizeIcon

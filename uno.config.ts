@@ -30,6 +30,7 @@ export default defineConfig({
   presets: [
     presetWind3({
       variablePrefix: 'mp-',
+      preflight: false,
     }),
   ],
   content: {
