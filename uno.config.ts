@@ -13,18 +13,18 @@ export default defineConfig({
     {
       getCSS: () => `
         :root {
-          --background: 240 10% 3.9%;
-          --foreground: 0 0% 98%;
-          --border: 240 3.7% 15.9%;
+          --mp-background: 240 10% 3.9%;
+          --mp-foreground: 0 0% 98%;
+          --mp-border: 240 3.7% 15.9%;
         }
       `,
     },
   ],
   theme: {
     colors: {
-      border: 'hsl(var(--border))',
-      background: 'hsl(var(--background))',
-      foreground: 'hsl(var(--foreground))',
+      border: 'hsl(var(--mp-border))',
+      background: 'hsl(var(--mp-background))',
+      foreground: 'hsl(var(--mp-foreground))',
     },
   },
   presets: [
