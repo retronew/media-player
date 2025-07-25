@@ -354,5 +354,6 @@ media-controller {
   --media-preview-background: hsl(var(--mp-background));
   --media-range-padding-left: 0px;
   --media-range-padding-right: 0px;
+  --media-button-padding: 10px;
 }
 </style>
