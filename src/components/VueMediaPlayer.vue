@@ -251,7 +251,7 @@ onUnmounted(() => {
       ]"
     >
       <media-control-bar
-        class=":uno: h-12 w-full overflow-hidden border border-border rounded-lg border-solid bg-background/98 px-1 shadow-[0_0.25rem_0.625rem_0rem_hsla(var(--background)/.2)] md:px-2.5"
+        class=":uno: h-12 w-full overflow-hidden border border-border rounded-lg border-solid bg-background/98 px-1 shadow-[0_0.25rem_0.625rem_0rem_hsla(var(--mp-background)/.2)] md:px-2.5"
         :class="[
           controlBarClass,
         ]"
@@ -336,22 +336,22 @@ onUnmounted(() => {
 media-controller {
   --media-font-size: 13px;
   --media-font-weight: 500;
-  --media-font-family: var(--font-inter), sans-serif;
+  --media-font-family: var(--mp-font-inter), sans-serif;
   --media-text-content-height: 1.375;
-  --media-primary-color: var(--foreground);
-  --media-secondary-color: hsla(var(--foreground) / 0.85);
+  --media-primary-color: var(--mp-foreground);
+  --media-secondary-color: hsla(var(--mp-foreground) / 0.85);
   --media-control-background: transparent;
   --media-control-hover-background: transparent;
   --media-icon-color: transparent;
-  --media-text-color: hsl(var(--foreground));
-  --media-range-background: hsl(var(--foreground));
-  --media-range-track-background: hsl(var(--foreground) / 0.1);
-  --media-time-range-buffered-color: hsl(var(--foreground) / 0.1);
+  --media-text-color: hsl(var(--mp-foreground));
+  --media-range-background: hsl(var(--mp-foreground));
+  --media-range-track-background: hsl(var(--mp-foreground) / 0.1);
+  --media-time-range-buffered-color: hsl(var(--mp-foreground) / 0.1);
   --media-range-track-height: 0.375rem;
-  --media-range-thumb-background: hsl(var(--foreground));
+  --media-range-thumb-background: hsl(var(--mp-foreground));
   --media-range-track-border-radius: 3px;
-  --media-range-bar-color: hsl(var(--foreground));
-  --media-preview-background: hsl(var(--background));
+  --media-range-bar-color: hsl(var(--mp-foreground));
+  --media-preview-background: hsl(var(--mp-background));
   --media-range-padding-left: 0px;
   --media-range-padding-right: 0px;
 }
