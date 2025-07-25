@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'VideoPlayer',
             fileName: 'index',
+            formats: ['es'],
           },
           rollupOptions: {
             external: ['vue'],
@@ -21,6 +22,7 @@ export default defineConfig(({ mode }) => {
               globals: {
                 vue: 'Vue',
               },
+              assetFileNames: 'style.css',
               exports: 'named',
             },
           },
