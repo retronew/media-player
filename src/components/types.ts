@@ -15,6 +15,7 @@ export interface Props {
   showDurationDisplay?: boolean
   showVolumeControls?: boolean
   showVolumeRange?: boolean
+  showPlaybackRate?: boolean
   showFullscreenButton?: boolean
   containerClass?: string
   videoClass?: string

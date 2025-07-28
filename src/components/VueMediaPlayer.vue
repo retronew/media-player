@@ -20,6 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
   showDurationDisplay: true,
   showVolumeControls: true,
   showVolumeRange: true,
+  showPlaybackRate: true,
   showFullscreenButton: true,
   containerClass: '',
   videoClass: '',
@@ -221,11 +222,13 @@ onUnmounted(() => {
       class=":uno: my-0"
       :class="[
         videoClass,
+        {
+          width,
+          height,
+        },
       ]"
       :src="src"
       :poster="poster"
-      :width="width"
-      :height="height"
       :preload="preload"
       :muted="muted"
       :autoplay="autoplay"
@@ -311,6 +314,11 @@ onUnmounted(() => {
         <media-volume-range
           v-if="showVolumeRange"
           class=":uno: hidden max-w-[5.375rem] pr-1.5 outline-none sm:block"
+        />
+
+        <media-playback-rate-button
+          v-if="showPlaybackRate"
+          class=":uno: min-w-12 select-none px-0 tracking-tight outline-none"
         />
 
         <media-fullscreen-button
