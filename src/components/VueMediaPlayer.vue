@@ -251,7 +251,7 @@ onUnmounted(() => {
       ]"
     >
       <media-control-bar
-        class=":uno: h-12 w-full overflow-hidden border border-border rounded-lg border-solid bg-background/98 px-1 shadow-[0_0.25rem_0.625rem_0rem_hsla(var(--mp-background)/.2)] md:px-2.5"
+        class=":uno: h-12 w-full overflow-hidden border border-border rounded-xl border-solid bg-background/98 px-1 shadow-[0_0.25rem_0.625rem_0rem_hsla(var(--mp-background)/.2)] md:px-2.5"
         :class="[
           controlBarClass,
         ]"
