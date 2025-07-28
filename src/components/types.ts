@@ -4,12 +4,12 @@ export interface Props {
   width?: number | string
   height?: number | string
   preload?: 'auto' | 'metadata' | 'none'
+  controls?: boolean
   muted?: boolean
   autoplay?: boolean
   loop?: boolean
   crossorigin?: 'anonymous' | 'use-credentials'
   playsinline?: boolean
-  showControls?: boolean
   showTimeDisplay?: boolean
   showTimeRange?: boolean
   showDurationDisplay?: boolean

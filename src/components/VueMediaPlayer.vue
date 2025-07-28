@@ -9,12 +9,12 @@ const props = withDefaults(defineProps<Props>(), {
   width: 704,
   height: 528,
   preload: 'auto',
+  controls: true,
   muted: false,
   autoplay: false,
   loop: false,
   crossorigin: 'anonymous',
   playsinline: false,
-  showControls: true,
   showTimeDisplay: true,
   showTimeRange: true,
   showDurationDisplay: true,
@@ -244,7 +244,7 @@ onUnmounted(() => {
     />
 
     <div
-      v-if="showControls"
+      v-if="controls"
       class=":uno: absolute inset-x-0 bottom-0 px-4 pb-4 md:px-12"
       :class="[
         controlsContainerClass,
